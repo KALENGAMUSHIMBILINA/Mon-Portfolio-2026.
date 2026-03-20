@@ -1,4 +1,4 @@
-:root{
+:root {
     --violet-doux:#6c63FF;
     --violet-fonce:#534EDD;
     --violet-vif:#FFA726;
@@ -13,22 +13,22 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    backgrount-color: var(--gris-tres-clair);
+body {
+    background-color: #F8F8F8;
     font-family: roboto, sans-serif;
     line-height: 1.6;
 }
 
-header{
-    backgrount-color: white;
-    box-shadow: 2x 6px 10px rgba(0, 0, 0, 0.05)
+header {
+    background-color: white;
+    box-shadow: 2x 6px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
-    z-idex: 100;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 3rem 
+    padding: 2rem 3rem; 
  }
 
 header div a {
@@ -36,4 +36,49 @@ header div a {
     font-size: 2.2rem;
     font-weight: bold;
     color: Var(--violet-doux);
+}
+
+ul li {
+    list-style: none;
+    margin-left: 25px;
+} 
+
+ul {
+    display: flex;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--violet-doux);
+    font-weight: 600;
+    font: size 1.1rem;
+    position: relative;
+    padding: 10px 0;
+}
+
+ul li a:hover {
+    color: #6c63FF
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px
+    width: 0;
+    background-color: Var(--violet-doux);
+    transition: width 0.3s ease;
+}
+
+ul li a:hover::after {
+    width: 100%;
+}
+
+a.active {
+    color: var(--violet-doux);
+}
+
+a.active::after {
+    width: 100%;
 }
